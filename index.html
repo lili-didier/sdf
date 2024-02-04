@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        html {
+            background-color: white;
+
+
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        #logo {
+            height: 200px;
+            margin: 10px;
+        }
+
+        #logo:hover {
+            height: 220px;
+            margin: 0px;
+            cursor: pointer;
+        }
+
+        #titre {
+            text-align: center;
+        }
+
+        #membres {
+            width: 200px;
+            margin: auto;
+        }
+    </style>
+    <script lang="javascript">
+
+        function bonjour(nom) {
+            console.log("Bonjour " + nom)
+        }
+
+        async function presspapier() {
+            console.log("presse-papier")
+            try {
+                const data = await fetch("logoSDF.jpg");
+                const blob = await data.blob();
+                await navigator.clipboard.write([
+                    new ClipboardItem({
+                        [blob.type]: blob,
+                    }),
+                ]);
+                console.log('Image copied.');
+            } catch (err) {
+                console.error(err.name, err.message);
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="titre">
+        <h1>Salade de fruit</h1>
+        <a href="logoSDF.jpg" target="_blank"><img id="logo" src="logoSDF.jpg" alt="logo"></a>
+        <br>
+        <button onclick="javascript:presspapier()">Copier dans le press-papier</button>
+    </div>
+    <h2>membres de la société</h2>
+    <ul id="membres">
+        <li>Elie</li>
+        <li>Nino</li>
+        <li>Kinan</li>
+        <li>Adam</li>
+        <li>Clement</li>
+        <li>Chams</li>
+        <li>Ilies</li>
+        <li>Calie</li>
+        <li>Alya</li>
+    </ul>
+</body>
+
+</html>
