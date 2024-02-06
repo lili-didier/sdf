@@ -7,8 +7,13 @@
 
 
         }
+        body {
+  background-image: linear-gradient(#4b03f5,red);
+  padding: 20px;
+}
 
         h1 {
+            text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
             font-size: 40px;
         }
 
@@ -34,6 +39,14 @@
         #membres {
             width: 200px;
             margin: auto;
+        }
+        #alphabet{
+            font-size: 20px;
+            color: black; 
+            margin: auto;  
+            width: 200px;
+            margin-top: 25px;
+            display: block;
         }
     </style>
     <script lang="javascript">
@@ -70,7 +83,7 @@
     <h2>membres de la société</h2>
     <ul id="membres">
         <li>Elie</li>
-        <li>Nino</li>
+        <li><a href="nino.html">Nino</a></li>
         <li>Kinan</li>
         <li>Adam</li>
         <li>Clement</li>
@@ -78,7 +91,12 @@
         <li>Ilies</li>
         <li>Calie</li>
         <li>Alya</li>
+        <li>Mina</li>
     </ul>
+    <a 
+        href="alphabet.html"
+        id="alphabet"
+    >alphabet SDF</a>
 </body>
 
 </html>
